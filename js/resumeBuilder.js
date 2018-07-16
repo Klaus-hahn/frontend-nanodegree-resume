@@ -7,7 +7,7 @@ var bio = {
 		"github": "Klaus-hahn",
 		"location": "Prague"
 	},
-	"welcomeMessage": "hello, you are on my résumé"
+	"welcomeMessage": "hello, you are on my résumé",
 	"skills": ["Javascript", "HTML", "CSS", "Langages"],
 	"bioPic": "images/me.jpg"
 }
@@ -16,7 +16,7 @@ var education = {
     "schools": [
 		{
 	  		"name": "Leonardo Da Vinci",
-	  		"city": "Brasília"
+	  		"city": "Brasília",
 	  		"degree": "middle school",
 	  		"dates": 2013
 	  	},
@@ -45,4 +45,18 @@ var education = {
 			"dates": 2018
 		}
 	]
+}
+
+if(bio.skills.length > 0) {
+	
+	$("#header").append(HTMLskillsStart);
+	
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+	$("#skills").append(formattedSkill);
 }
