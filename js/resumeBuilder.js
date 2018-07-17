@@ -67,7 +67,18 @@ var projects = {
 		}
 	]
 }
-
+//header (name, role, pic, welcome message)
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+$("#header").append(formattedName);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").append(formattedRole);
+var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").append(formattedPic);
+var formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(formattedMsg);
+//contacts
+$("#header").append(HTMLcontactGeneric);
+//skills
 if(bio.skills.length > 0) {
 	
 	$("#header").append(HTMLskillsStart);
@@ -81,7 +92,7 @@ if(bio.skills.length > 0) {
 	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 	$("#skills").append(formattedSkill);
 }
-
+//work experience (where i've worked, employer, dates and details)
 for (job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 
@@ -96,3 +107,4 @@ for (job in work.jobs) {
 	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 	$(".work-entry:last").append(formattedDescription);
 }
+//projects
