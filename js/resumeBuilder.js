@@ -7,7 +7,7 @@ var bio = {
 		"github": "Klaus-hahn",
 		"location": "Prague"
 	},
-	"welcomeMessage": "hello, you are on my résumé",
+	"welcomeMessage": "Student, looking to work with front-end web development.",
 	"skills": ["Javascript", "HTML", "CSS", "Langages"],
 	"bioPic": "images/me.jpg"
 }
@@ -19,6 +19,16 @@ var work = {
 			"title": "Car Cleaner",
 			"dates": "2016 - 2017",
 			"description": "I used to clean the car for 20 reais."
+		}
+	]
+}
+
+var projects = {
+	"projects": [
+		{
+			"title": "Portfolio using Udacity",
+			"dates": "2018",
+			"description": "I've made a porfolio to show my skills, education, work experience, projects and hability with web dev."
 		}
 	]
 }
@@ -53,7 +63,9 @@ if(bio.skills.length > 0) {
 	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 	$("#skills").append(formattedSkill);
 }
+
 //work experience (where i've worked, employer, dates and details)
+
 function displayWork() {
 	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
@@ -69,8 +81,24 @@ function displayWork() {
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
 	}
-}
+};
 displayWork();
+
+//projects
+
+function displayProjects() {
+	for (project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+
+		var formattedTitleP = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		var formattedDateP = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		var formattedDescriptionP = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(formattedTitleP);
+		$(".project-entry:last").append(formattedDateP);
+		$(".project-entry:last").append(formattedDescriptionP);
+	}
+};
+displayProjects();
 //click collector
 $(document).click(function(loc) {
   var x = loc.pageX;
@@ -88,4 +116,3 @@ function inName(name) {
 	return name[0] +" "+name[1];
 }
 $("#main").append(internationalizeButton);
-//projects
