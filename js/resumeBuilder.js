@@ -12,41 +12,6 @@ var bio = {
 	"bioPic": "images/me.jpg"
 }
 
-var education = {
-    "schools": [
-		{
-	  		"name": "Leonardo Da Vinci",
-	  		"city": "Brasília",
-	  		"degree": "middle school",
-	  		"dates": 2013
-	  	},
-	  	{
-	  		"name": "Bom Jesus da Nossa Senhora do Rosário",
-	  		"city": "Paranaguá",
-	  		"degree": "middle school",
-	  		"dates": [ 2014, 2015, 2016 ]  		
-	  	},
-	  	{
-	  		"name": "Colégio Ideal",
-	  		"city": "Brasília",
-	  		"degree": "middle school",
-	  		"dates": 2017
-	  	}
-	],
-	"onlineCourses": [
-		{
-			"title": "Init to Javascript",
-			"school": "Udacity",
-			"dates": 2018
-		},
-		{
-			"title": "JavaScript Basics",
-			"school": "Udacity",
-			"dates": 2018
-		}
-	]
-}
-
 var work = {
 	"jobs": [
 		{
@@ -58,20 +23,9 @@ var work = {
 	]
 }
 
-var projects = {
-	"projects": [
-		{
-			"title": "résumé",
-			"dates": "2018",
-			"description": "the résumé that you're currently in"
-		}
-	]
-}
 //header (name, role, pic, welcome message)
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(formattedRole);
 var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
 $("#header").append(formattedPic);
 var formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
