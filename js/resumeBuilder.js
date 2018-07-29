@@ -52,7 +52,10 @@ var education = {
 	]
 }
 
+//debug
+
 //header (name, role, pic, welcome message)
+
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").append(formattedName);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -61,16 +64,24 @@ var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
 $("#header").append(formattedPic);
 var formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedMsg);
+
 //contacts
+
 var formMobile = HTMLmobile.replace("%data%", bio.contacts["mobile"]);
-$("#topContacts").append(formMobile);
+//$("#topContacts").append(formMobile);
+$("#footerContacts").append(formMobile);
 var formEmail = HTMLemail.replace("%data%", bio.contacts["email"]);
-$("#topContacts").append(formEmail);
+//$("#topContacts").append(formEmail);
+$("#footerContacts").append(formEmail);
 var formGit = HTMLgithub.replace("%data%", bio.contacts["github"]);
-$("#topContacts").append(formGit);
+//$("#topContacts").append(formGit);
+$("#footerContacts").append(formGit);
 var formLocation = HTMLlocation.replace("%data%", bio.contacts["location"]);
-$("#topContacts").append(formLocation);
+//$("#topContacts").append(formLocation);
+$("#footerContacts").append(formLocation);
+
 //skills
+
 if(bio.skills.length > 0) {
 	
 	$("#header").append(HTMLskillsStart);
@@ -92,14 +103,12 @@ function displayEducation() {
 		$("#education").append(HTMLschoolStart);
 
 		var formattedNameS = HTMLschoolName.replace("%data%", education.schools[school].name);
-		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 		var formattedDatesS = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 
-		$(".education-entry:last").append(formattedNameS);
-		$(".education-entry:last").append(formattedDegree);
+		$(".education-entry:last").prepend(formattedNameS);
 		$(".education-entry:last").append(formattedDatesS);
-		$(".education-entry:last").append(formattedLocation);
+		$(".education-entry:last").prepend(formattedLocation);
 	}
 	for (onlineCourse in education.onlineCourses) {
 		$(".education-entry:last").append(HTMLonlineClasses);
