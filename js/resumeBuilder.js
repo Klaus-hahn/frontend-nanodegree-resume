@@ -18,7 +18,8 @@ var work = {
 			"employer": "Mom",
 			"title": "Car Cleaner",
 			"dates": "2016 - 2017",
-			"description": "I used to clean the car for 20 reais."
+			"description": "I used to clean the car for 20 reais.",
+			"location": "Paranaguá - Brazil"
 		}
 	]
 }
@@ -139,6 +140,9 @@ function displayWork() {
 
 		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 		$(".work-entry:last").append(formattedDates);
+
+		var formLocationW = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		$(".work-entry:last").append(formLocationW);
 
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
