@@ -187,4 +187,4 @@ $("#main").append(internationalizeButton);
 
 //map append
 
-$("#mapDiv").append(map);
+$("#mapDiv").append(googleMap);
