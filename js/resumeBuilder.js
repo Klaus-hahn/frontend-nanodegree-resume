@@ -53,8 +53,6 @@ var education = {
 	]
 }
 
-//debug
-
 //header (name, role, pic, welcome message)
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -186,3 +184,7 @@ function inName(name) {
 	return name[0] +" "+name[1];
 }
 $("#main").append(internationalizeButton);
+
+//map append
+
+$("#mapDiv").append(map);
