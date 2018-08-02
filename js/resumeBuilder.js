@@ -37,10 +37,25 @@ var projects = {
 var education = {
 	"schools": [
 		{
+			"name": "Colégio Bom Jesus Nossa Senhora do Rosário",
+			"location": "Paranaguá, Brazil",
+			"degree": "Middle School",
+			"dates": "2014 - 2016",
+			"major": "none"
+		},
+		{
+			"name": "Colégio Ideal",
+			"location": "Brasília, Brazil",
+			"degree": "Middle School",
+			"dates": "2017",
+			"major": "none"
+		},
+		{
 			"name": "Vyšší odborná škola informačních studií a Střední škola elektrotechniky, multimédií a informatiky",
 			"location": "Prague, Czech Republic",
 			"degree": "IT High School",
-			"dates": "2018 - present days"
+			"dates": "2018 - present days",
+			"major": "IT"
 		}
 	],
 	"onlineCourses": [
@@ -104,10 +119,14 @@ function displayEducation() {
 		var formattedNameS = HTMLschoolName.replace("%data%", education.schools[school].name);
 		var formattedDatesS = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
 
-		$(".education-entry:last").prepend(formattedNameS);
+		$(".education-entry:last").append(formattedDegree);
+		$(".education-entry:last").append(formattedMajor);
+		$(".education-entry:last").append(formattedNameS);
 		$(".education-entry:last").append(formattedDatesS);
-		$(".education-entry:last").prepend(formattedLocation);
+		$(".education-entry:last").append(formattedLocation);
 	}
 	for (onlineCourse in education.onlineCourses) {
 		$(".education-entry:last").append(HTMLonlineClasses);
@@ -159,7 +178,7 @@ function displayProjects() {
 		var formattedDescriptionP = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 		$(".project-entry:last").append(formattedTitleP);
 		$(".project-entry:last").append(formattedDateP);
-		$(".project-entry:last").append(formattedDescriptionP);
+		$(".project-entry:last").append(formattedDescriptionP);6
 	}
 };
 displayProjects();
