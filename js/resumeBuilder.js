@@ -5,7 +5,7 @@ var bio = {
 		"mobile": "420 608 857 612",
 		"email": "klaus.hahn.work@gmail.com",
 		"github": "Klaus-hahn",
-		"location": "Prague"
+		"location": "Prague, Czech Republic"
 	},
 	"welcomeMessage": "Student, looking to work with front-end web development.",
 	"skills": ["Javascript", "HTML", "CSS", "Langages"],
@@ -19,7 +19,7 @@ var work = {
 			"title": "Car Cleaner",
 			"dates": "2016 - 2017",
 			"description": "I used to clean the car for 20 reais.",
-			"location": "Paranaguá - Brazil"
+			"location": "Paranaguá, Brazil"
 		}
 	]
 }
@@ -38,7 +38,7 @@ var education = {
 	"schools": [
 		{
 			"name": "Vyšší odborná škola informačních studií a Střední škola elektrotechniky, multimédií a informatiky",
-			"location": "Prague - Czech Republic",
+			"location": "Prague, Czech Republic",
 			"degree": "IT High School",
 			"dates": "2018 - present days"
 		}
