@@ -9,7 +9,7 @@ var bio = {
 	},
 	"welcomeMessage": "Student, looking to work with front-end web development.",
 	"skills": ["Javascript", "HTML", "CSS", "Langages"],
-	"bioPic": "images/me.jpg"
+	"bioPic": "images/fry.jpg"
 }
 
 var work = {
